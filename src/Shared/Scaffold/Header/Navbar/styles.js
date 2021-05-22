@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
     display:flex;
     height:80px;
-    width:100%;
+    width:78%;
     justify-content:center;
     align-items:center;
     background-color:transparent;
     top:0;
-    padding: var(--padding-default);
     z-index:999;
     position: absolute;
 `;
@@ -54,5 +53,4 @@ export const NavbarMenu = styled.ul`
         font-weight: 500;
     }
 `;
-
 

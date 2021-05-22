@@ -20,6 +20,7 @@ export default createGlobalStyle`
         outline: 0;
         box-sizing: border-box;
         font-family: Open Sans;
+        list-style: none;
     }
 
     html,body, #root{

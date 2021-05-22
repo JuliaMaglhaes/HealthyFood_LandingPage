@@ -1,22 +1,14 @@
 import GlobalStyle from './styles/global';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Recipes from './components/Recipes';
-import Banner from './components/Banner';
-import Blog from './components/Blog';
 
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './router/routes'
 
 function App() {
   return (
-    <>
-      <Navbar />
-        <Header/>
-        <Recipes/>
-        <Banner/>
-        <Blog />
+    <Router>
+      <Routes />
       <GlobalStyle/>
-    </>
+    </Router>
   );
 }
 

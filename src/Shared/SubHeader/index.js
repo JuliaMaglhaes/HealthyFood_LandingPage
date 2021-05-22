@@ -1,17 +1,12 @@
 import React from 'react';
 import { MdSearch } from 'react-icons/md';
 
-import {
-    Container,
-    Information,
-    InputArea,
-    Spacer
-} from './styles';
+import { Container, Information, InputArea, Spacer } from './styles';
 
-const Header = () => { 
+function SubHeader() {
   return(
-        <Container>
-            <Information>
+    <Container>
+       <Information>
                 <Spacer/>
                 <h1>Ready for Trying a new recipe?</h1>
                 <InputArea>
@@ -24,8 +19,8 @@ const Header = () => {
                     </button>
                 </InputArea>
             </Information>
-        </Container>
-    )
+    </Container>
+  )
 }
 
-export default Header;
+export default SubHeader;

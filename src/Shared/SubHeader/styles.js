@@ -3,13 +3,15 @@ import ImageHeader from '../../assets/img/Illustration.svg';
 
 export const Container = styled.div`
     display:flex;
-    height:100%;
+    height:100vh;
     width:100%;
     background-color: var(--color-white);
     background-image: url(${ImageHeader});
     background-repeat: no-repeat;
     min-height:650px;
     background-position: right;
+    background-position-y: 0px;
+    
 `;
 
 export const Information = styled.div`
@@ -18,7 +20,6 @@ export const Information = styled.div`
     width:50%;
     justify-content:center;
     padding: var(--padding-default);
-
     h1{
         color: var(--color-titles);
         font-size:50px;
@@ -27,7 +28,6 @@ export const Information = styled.div`
 export const InputArea = styled.div`
     display:flex;
     padding-top:30px;
-
     input{
         display: block;
         width: 100%;
@@ -40,7 +40,6 @@ export const InputArea = styled.div`
         border: 1px solid var(--color-titles);
         border-radius: 5px;     
     } 
-
     button{
         background-color: var(--color-font-title-logo);
         border:none;
@@ -52,5 +51,4 @@ export const InputArea = styled.div`
 
 export const Spacer = styled.div`
     height:85px;
-`
-
+`;
