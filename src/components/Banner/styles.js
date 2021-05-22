@@ -47,7 +47,13 @@ export const Description = styled.div`
         border: none;
         border-radius: 5px;
         color: var(--color-white);
-        box-shadow: var(--shadow)
+        box-shadow: var(--shadow);
+        transition: all 0.2s ease 0s;
+        cursor:pointer;
+
+        :hover{
+            background-color: var(--color-verde-hover);
+        }
     }
 `
 

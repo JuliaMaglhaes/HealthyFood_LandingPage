@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ImageHeader from '../../assets/img/Illustration.svg';
+import ImageHeader from '../../../assets/img/Illustration.svg';
 
 export const Container = styled.div`
     display:flex;
@@ -46,6 +46,13 @@ export const InputArea = styled.div`
         border-radius: 5px;
         margin-left:10px;
         width:70px;
+        cursor:pointer;
+        transition: 0.3s;
+
+        :hover{
+            background-color: var(--color-verde-hover);
+            transition: 0.3s;
+        }
     }
 `
 

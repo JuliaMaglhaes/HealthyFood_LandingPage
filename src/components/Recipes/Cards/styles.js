@@ -45,6 +45,12 @@ export const BoxText = styled.div`
         height:40px;
         border:none;
         border-radius: 5px;
-        color:var(--color-white)
+        color:var(--color-white);
+        cursor:pointer;
+        transition: all 0.2s ease 0s;
+        
+        :hover{
+            background-color: var(--color-verde-hover);
+        }
     }
 `

@@ -5,6 +5,7 @@ import Routes from './router/routes'
 
 function App() {
   return (
+
     <Router>
       <Routes />
       <GlobalStyle/>
