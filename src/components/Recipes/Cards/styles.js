@@ -47,10 +47,15 @@ export const BoxText = styled.div`
         border-radius: 5px;
         color:var(--color-white);
         cursor:pointer;
-        transition: all 0.2s ease 0s;
         
         :hover{
             background-color: var(--color-verde-hover);
+        }
+    }
+
+    @media screen and (max-width:616px){
+        h2{
+            font-size:23px;
         }
     }
 `

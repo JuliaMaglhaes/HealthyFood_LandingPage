@@ -10,7 +10,7 @@ import {
 
 const Recipes = () => {
   return(
-    <Container>
+    <Container id="recipes">
         <ContainerText>
             <InfoText>
                 <h1>Our Best Recipes</h1>

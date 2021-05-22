@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Background from '../../assets/img/bloco_services.svg';
 
 export const Container = styled.div`
+    position: relative;
     width:100%;
     height:100vh;
     background-color: var(--color-white);
@@ -9,29 +10,35 @@ export const Container = styled.div`
     background-position: left;
     background-repeat: no-repeat;
     min-height:690px;
-    justify-content:right;
+
+    @media screen and (max-width:616px){
+        background-position: 115%;
+    }
 `;
 
 export const TextContainer = styled.div`
-    position: relative;
     display:flex;
-    width:70%;
+    width:50%;
     height:100%;
     flex-direction: column;
     justify-content:space-around;
     float:right;
-    padding: 0 260px;
+
+    @media screen and (max-width:616px){
+        width:55%;
+    }
 `
 
 export const Description = styled.div`
-    height:60%;
+    height:65%;
     display:flex;
     flex-direction: column;
     position: relative;
     justify-content:space-around;
+    width:63%;
 
     h1{
-        color: var(--color-titles);
+        color: var(--color-titles-secundary);
         font-size:35px;
     }
 
@@ -53,6 +60,22 @@ export const Description = styled.div`
 
         :hover{
             background-color: var(--color-verde-hover);
+        }
+    }
+
+    @media screen and (max-width:616px){
+        width:100%;
+
+        h1{
+            font-size:30px;
+        }
+
+        p{
+            font-size:15px;
+        }
+
+        button{
+            width:100px;
         }
     }
 `

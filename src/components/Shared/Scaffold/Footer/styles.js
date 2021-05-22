@@ -10,6 +10,7 @@ export const Container = styled.div`
     padding: var(--padding-default);
     bottom:0;
     position: relative;
+    flex-wrap: wrap-reverse;
 
     strong{
         color: var(--color-titles);
@@ -31,5 +32,9 @@ export const Container = styled.div`
         }
     }
 
+    @media screen and (max-width:616px){
+        justify-content:center;
+        padding:20px;
+    }
   
 `;

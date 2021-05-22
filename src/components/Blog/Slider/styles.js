@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width:100%;
-    height:100%;
+    height:110%;
     position:relative;
     padding: var(--padding-default);
     display: flex;
     overflow: hidden;
+    justify-content:center;
 `
 
 export const Card = styled.div`

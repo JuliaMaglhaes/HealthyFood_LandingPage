@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height:100vh;
+  height:auto;
   width:100%;
-  min-height:690px;
+  min-height:100vh;
   background-color: var(--background-color);
   justify-content:center;
   position: relative;
+
 `;
 
 export const ContainerText = styled.div`
   width:100%;
+  height:auto;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -35,6 +37,11 @@ export const InfoText = styled.div`
     margin-top:15px;
     font-size:16px;
     color:var(--color-p)
+  }
+
+  @media screen and (max-width:616px){
+    width:90%;
+
   }
 `
 

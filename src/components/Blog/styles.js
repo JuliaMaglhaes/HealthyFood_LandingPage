@@ -21,11 +21,16 @@ export const TextArea = styled.div`
 
     h1{
         color: var(--color-titles);
+        font-family: Montserrat;
     }
 
     p{
         margin-top:15px;
         color: var(--color-p)
+    }
+
+    @media screen and (max-width:616px){
+        width:90%;
     }
 `
 
@@ -35,4 +40,5 @@ export const SliderArea = styled.div`
     height:70vh;
     justify-content:center;
     overflow: hidden;
+    display:flex;
 `

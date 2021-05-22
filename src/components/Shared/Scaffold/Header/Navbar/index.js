@@ -15,9 +15,9 @@ const Navbar = () => {
         <NavbarContainer>
           <Link to="/"><NavLogo>Healthy Food</NavLogo></Link>
           <NavbarMenu>
-            <Link to="/"><li>Healthy Recipes</li></Link>
+            <AnchorLink href='#recipes'><li>Healthy Recipes</li></AnchorLink>
             <AnchorLink href='#blog'><li>Blog</li></AnchorLink>
-            <AnchorLink href='#'><li>Join</li></AnchorLink>
+            <AnchorLink href='#member'><li>Join</li></AnchorLink>
             <Link to="/form"><li className="menu-botton">Register</li></Link>
           </NavbarMenu>
         </NavbarContainer>

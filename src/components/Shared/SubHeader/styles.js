@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ImageHeader from '../../../assets/img/Illustration.svg';
 
 export const Container = styled.div`
+    position: relative;
     display:flex;
     height:100vh;
     width:100%;
@@ -12,6 +13,10 @@ export const Container = styled.div`
     background-position: right;
     background-position-y: 0px;
     
+    @media screen and (max-width:616px){
+        background-size: 100%;
+        justify-content:center;
+    }
 `;
 
 export const Information = styled.div`
@@ -20,9 +25,16 @@ export const Information = styled.div`
     width:50%;
     justify-content:center;
     padding: var(--padding-default);
+    
     h1{
         color: var(--color-titles);
         font-size:50px;
+    }
+
+    @media screen and (max-width:616px){
+        justify-content:center;
+        padding:0;
+        width:90%;
     }
 `
 export const InputArea = styled.div`
@@ -54,8 +66,13 @@ export const InputArea = styled.div`
             transition: 0.3s;
         }
     }
+
 `
 
 export const Spacer = styled.div`
     height:85px;
+
+    @media screen and (max-width:616px){
+        height:51%;
+    }
 `;

@@ -51,6 +51,8 @@ export const NavbarMenu = styled.ul`
         text-transform: uppercase;
         cursor:pointer;
         font-weight: 500;
+        width:100%;
+
     }
 `;
 

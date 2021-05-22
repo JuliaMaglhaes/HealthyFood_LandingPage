@@ -4,15 +4,17 @@ import Banner from '../../components/Banner';
 import Blog from '../../components/Blog';
 import SubHeader from '../../components/Shared/SubHeader';
 import Scaffold from '../../components/Shared/Scaffold';
+import MemberContact from '../../components/MemberContact';
 
 
 const HomePage = () => {
   return(
        <Scaffold>
-        <SubHeader/>
+          <SubHeader/>
           <Recipes/>
           <Banner/>
           <Blog />
+          <MemberContact/>
        </Scaffold>
   );
 }
