@@ -12,8 +12,28 @@ export const Container = styled.div`
     min-height:650px;
     background-position: right;
     background-position-y: 0px;
-    
-    @media screen and (max-width:616px){
+
+    @media (min-width: 905px )and (max-width:1200px){
+        background-position: 400px;
+        background-position-y: 0;
+        height:100vh;
+    }
+    @media (min-width: 598px )and (max-width:840px){
+        background-position: 200px;
+        background-position-y: 0;
+    }
+    @media screen and (max-width:859px){
+        background-size: 100%;
+        justify-content:left;
+        padding:40px;
+        height:auto;
+    }
+    @media (min-width:841px )and (max-width:903px){
+        background-position: 300px;
+        justify-content:left;
+        height:auto;
+    }
+    @media screen and (max-width:460px){
         background-size: 100%;
         justify-content:center;
     }
@@ -31,10 +51,30 @@ export const Information = styled.div`
         font-size:50px;
     }
 
-    @media screen and (max-width:616px){
-        justify-content:center;
-        padding:0;
-        width:90%;
+    @media screen and (max-width:596px){
+        margin-top:390px;
+        align-items: center;
+        padding: 0;
+        width:100%;
+
+        h1{
+            font-size:39px;
+        }
+    }
+    @media (min-width: 597px )and (max-width:1000px){
+        width: 60%;
+        justify-content: center;
+        padding:40px;
+
+        h1{
+            font-size:40px;
+        }
+    }
+
+    @media (min-width:1001px) and (max-width:1200px){
+        width:60%;
+        padding:120px;
+
     }
 `
 export const InputArea = styled.div`
@@ -74,5 +114,9 @@ export const Spacer = styled.div`
 
     @media screen and (max-width:616px){
         height:51%;
+    }
+
+    @media (min-width: 597px )and (max-width:700px){
+        display:none;
     }
 `;

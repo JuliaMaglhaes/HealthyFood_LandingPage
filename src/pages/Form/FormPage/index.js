@@ -10,6 +10,25 @@ import {
     ContainerArea
 } from './styles';
 
+const handleSubmit = event => {
+    event.preventDefault();
+    const data = {
+        name: event.target.elements.name.value,
+        date: event.target.elements.date.value,
+        cpf: event.target.elements.cpf.value,
+        cep: event.target.elements.cep.value,
+        bairro: event.target.elements.bairro.value,
+        cidade: event.target.elements.cidade.value,
+        uf: event.target.elements.uf.value,
+        numero: event.target.elements.numero.value,
+        logradouro: event.target.elements.logradouro.value,
+        complemento: event.target.elements.complemento.value,
+    }
+    const dadosForm = JSON.stringify(data);
+    localStorage.setItem("dados", dadosForm);
+    // document.cookie = `name=${dadosForm.name}`;
+}
+
 const FormPage = () => {
     const changeCep = (event, setFieldValue) =>{
         const {value} = event.target;
@@ -37,20 +56,19 @@ const FormPage = () => {
                     validationSchema = {schema}
                     validateOnMount
                     initialValues = {{
-                        name:'',
+                        name: '',
                         date: '',
                         cpf:'',
                         cep:'',
                         bairro:'',
                         cidade:'',
-                        estado:'',
                         uf: '',
                         numero:'',
                         logradouro:'',
                         complemento: '',
                     }}
                     render={({isValid, setFieldValue}) => (
-                        <Form>
+                        <Form onSubmit={handleSubmit}>
                             <img src={Logo} alt="logo" />
                             <h1>Preencha seus dados</h1>
                             <ContainerForm>
@@ -144,5 +162,4 @@ const FormPage = () => {
         </Container>
     );
 }
-
 export default FormPage;

@@ -39,10 +39,9 @@ export const InfoText = styled.div`
     color:var(--color-p)
   }
 
-  @media screen and (max-width:616px){
-    width:90%;
-
-  }
+  @media screen and (max-width:900px){
+        width:90%;
+    }
 `
 
 export const ContainerCards = styled.div`

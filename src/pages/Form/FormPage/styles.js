@@ -57,13 +57,26 @@ export const Container = styled.div`
             width:100%;
 
             #city{
-                padding:0px 1px 0 100px;;
+                padding:0px 1px 0 100px;
             }
             #estado{
-                padding:0px 100px 0 10px;;
+                padding:0px 100px 0 10px;
             }
         }
     }
+    @media screen and (max-width:900px){
+        form{
+            width:100%;
+
+            .information #city{
+                padding-left: 30px;
+            }
+            .information #estado{
+                padding-right:30px;
+            }
+        }
+    }
+
 `;
 
 export const ContainerArea = styled.div`
@@ -109,6 +122,10 @@ export const ContainerForm = styled.div`
         background-color: var(--background-color);
         background-clip: padding-box;
         border: 1px solid var(--color-titles);
+    }
+
+    @media screen and (max-width:900px){
+        padding: 0 30px;
     }
     
 

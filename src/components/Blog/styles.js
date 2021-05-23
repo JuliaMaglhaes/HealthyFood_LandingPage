@@ -29,8 +29,9 @@ export const TextArea = styled.div`
         color: var(--color-p)
     }
 
-    @media screen and (max-width:616px){
+    @media screen and (max-width:1200px){
         width:90%;
+
     }
 `
 

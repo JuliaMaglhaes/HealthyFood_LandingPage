@@ -25,6 +25,10 @@ export const BoxImage = styled.div`
     background-size: cover;
     background-position: 16%;
     border-radius: 5px 0 0 5px;
+
+    @media screen and (max-width:375px){
+        min-width:200px;
+    }
 `
 
 export const BoxText = styled.div`
