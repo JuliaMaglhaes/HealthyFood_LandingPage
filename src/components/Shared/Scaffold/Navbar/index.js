@@ -16,7 +16,7 @@ function Navbar() {
                 <Link to="/"><NavLogo>Healthy Food</NavLogo></Link>
                 <NavbarMenu>
                     <AnchorLink href='#recipes'><li>Healthy Recipes</li></AnchorLink>
-                    <AnchorLink href='#blog'><li>Blog</li></AnchorLink>
+                    <AnchorLink  href='#blog'><li>Blog</li></AnchorLink>
                     <AnchorLink href='#member'><li>Join</li></AnchorLink>
                     <Link to="/cadastro"><li className="menu-botton">Register</li></Link>
                 </NavbarMenu>

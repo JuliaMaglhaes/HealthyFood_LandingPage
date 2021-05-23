@@ -42,7 +42,6 @@ const FormPage = () => {
                         cpf:'',
                         cep:'',
                         bairro:'',
-                        rua:'',
                         cidade:'',
                         estado:'',
                         uf: '',

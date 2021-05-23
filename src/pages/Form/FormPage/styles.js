@@ -13,10 +13,6 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         width:100%;
-
-        p{
-
-        }
     }
 
     form{
@@ -28,8 +24,7 @@ export const Container = styled.div`
         align-items: center;
         margin-top:-150px;
         background-color: var(--color-white);
-        border-radius: 5px;
-
+        border-radius: 15px 15px 0 0;
 
         button{
             background-color: var(--color-font-title-logo);

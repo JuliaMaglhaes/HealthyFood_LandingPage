@@ -7,7 +7,6 @@ export default Yup.object().shape({
     uf: Yup.string().required(),
     bairro: Yup.string().required(),
     cpf: Yup.string().length(11).required(),
-    rua: Yup.string().min(2).required(),
     cidade: Yup.string().min(2).required(),
     numero: Yup.string().required(),
 });
