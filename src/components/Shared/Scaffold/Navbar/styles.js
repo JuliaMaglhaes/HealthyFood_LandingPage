@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
     display:flex;
     height:80px;
-    width:78%;
+    width:100%;
     justify-content:center;
     align-items:center;
     background-color:transparent;
@@ -14,7 +14,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
     display:flex;
-    width:100%;
+    width:78%;
     max-width: 1400px;
     height:80px;
     justify-content: space-between;
@@ -55,4 +55,3 @@ export const NavbarMenu = styled.ul`
 
     }
 `;
-

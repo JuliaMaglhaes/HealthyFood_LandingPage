@@ -11,7 +11,7 @@ const MainRoutes = () => {
     return(
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/form" element={<Form />} />
+            <Route path="/cadastro" element={<Form />} />
         </Routes>
 
     )

@@ -13,6 +13,7 @@ export default createGlobalStyle`
         --background-color: #fafafc;
         --color-white-hover: #ccc;
         --color-p: #a2a1a6;
+        --verde-escuro: #53a547;
         --color-p-hover: #726b6b;
         
         --shadow: 6px 9px 28px -6px rgba(0,0,0,0.26);
@@ -33,7 +34,7 @@ export default createGlobalStyle`
     }
 
     body{
-        background-color: var(--color-white);
+        background-color: var(--background-color);
         -webkit-font-smoothing: antialiased !important;
     }
 

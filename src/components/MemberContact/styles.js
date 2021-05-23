@@ -66,8 +66,7 @@ export const Container = styled.div`
         }
 
         .inputArea{
-            width:80%;
+            width:80 
         }
     }
-  
-`;
+`
