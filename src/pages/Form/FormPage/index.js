@@ -24,19 +24,42 @@ const handleSubmit = event => {
         logradouro: event.target.elements.logradouro.value,
         complemento: event.target.elements.complemento.value,
     }
+    //Salvamento dos dados
     const dadosForm = JSON.stringify(data);
     localStorage.setItem("dados", dadosForm);
-    // document.cookie = `name=${dadosForm.name}`;
+
+    const cookieSave = () =>{
+        const date = new Date()
+        date.setTime(date.getTime() + 60000 * 100);
+
+        const expires = ";" + "expires=" + date.toUTCString();
+        document.cookie = "Nome="+`${data.name}`+ expires+ "; path=/";
+        document.cookie = "Data de nascimento="+`${data.date}`+ expires+ "; path=/";
+        document.cookie = "CPF="+`${data.cpf}`+expires+ "; secure; path=/";
+        document.cookie = "CEP="+`${data.cep}`+ expires+ "; path=/";
+        document.cookie = "Bairro="+`${data.bairro}`+ expires+ "; path=/";
+        document.cookie = "Cidade="+`${data.cidade}`+ expires+ "; path=/";
+        document.cookie = "UF="+`${data.uf}`+ expires+ "; path=/";
+        document.cookie = "Número="+`${data.numero}`+expires+ "; path=/";
+        if(data.logradouro.value < 1 || data.complemento.value < 1){
+            return;
+        } else{
+            document.cookie = "Logradouro="+`${data.logradouro}`+expires+ "; path=/";
+            document.cookie = "Complemento="+`${data.complemento}`+expires+ "; path=/";
+        }
+    }
+    cookieSave();
 }
 
 const FormPage = () => {
     const changeCep = (event, setFieldValue) =>{
         const {value} = event.target;
-        if(value.length !== 8){
+        const cep = value?.replace(/\.|\-/g, '');
+        if(cep.length !== 8){
             return;
         }
         async function fetchCEP(){
-            await  api.get(`/${value}/json/`)
+            await  api.get(`/${cep}/json/`)
             .then((response) => {
                 setFieldValue('bairro', response.data.bairro);
                 setFieldValue('cidade', response.data.localidade);
@@ -91,7 +114,6 @@ const FormPage = () => {
                                 <Field name="cep" type="text" onBlur={(event) => changeCep(event, setFieldValue)} />
                                 <ErrorMessage name="cep"/>
                             </ContainerForm>
-
                             <div className="information">
                                 <ContainerForm id="city">
                                     <label>Cidade</label>

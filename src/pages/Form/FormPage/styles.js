@@ -14,7 +14,6 @@ export const Container = styled.div`
         flex-direction: column;
         width:100%;
     }
-
     form{
         padding-top:40px;
         width:60%;
@@ -25,7 +24,6 @@ export const Container = styled.div`
         margin-top:-150px;
         background-color: var(--color-white);
         border-radius: 15px 15px 0 0;
-
         button{
             background-color: var(--color-font-title-logo);
             width: 130px;
@@ -43,15 +41,12 @@ export const Container = styled.div`
                 opacity: .5;
             }
         }
-
         img{
             width:10%;
         }
-
         h1{
             color: var(--color-titles);
         }
-
         .information{
             display:flex;
             width:100%;
@@ -78,7 +73,6 @@ export const Container = styled.div`
     }
 
 `;
-
 export const ContainerArea = styled.div`
     width:100%;
     justify-content:center;
