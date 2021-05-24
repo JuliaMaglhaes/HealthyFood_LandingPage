@@ -6,10 +6,29 @@ import avatar from '../../../assets/img/avatar.png';
 import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md'
 
 import React from 'react';
-
+import Carousel from 'react-elastic-carousel'
 
 import { Container, Card, CardImage, CardArea } from './styles';
 
+const breakPoints =[
+    {
+        width: 500,
+        itemsToShow: 1
+    },
+    {
+        width: 768,
+        itemsToShow:2
+    },
+    {
+        width:1200,
+        itemsToShow:3.4,
+        pagination: false
+    },
+    {
+        width:1500,
+        itemsToShow:4
+    },
+]
 const fakeData = [
     {
         image: `${ImageBlog}`,
@@ -39,6 +58,7 @@ const SliderCards = () =>{
    
     return(
         <Container>
+            <Carousel breakPoints={breakPoints}>
                 {fakeData.map(item=>(
                         <Card className="card">
                             <CardImage style={{backgroundImage: `url(${item.image})`}}></CardImage>
@@ -51,19 +71,9 @@ const SliderCards = () =>{
                             </CardArea>
                         </Card>
                     ))}
-                    {/* <button id="direita">
-                        <MdKeyboardArrowRight 
-                            size={40}
-                            color="#badc58"
-                        />
-                    </button> 
-                    <button id="esquerda">
-                        <MdKeyboardArrowLeft id="esquerda"
-                            size={40}
-                            color="#badc58"
-                        />
-                    </button>     */}
+                    </Carousel>
         </Container>
+
     )
 }
 

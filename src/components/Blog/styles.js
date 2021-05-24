@@ -38,10 +38,10 @@ export const TextArea = styled.div`
 
 export const SliderArea = styled.div`
     position: relative;
-    width:120%;
+    width:100%;
     height:auto;
     justify-content:center;
     overflow: hidden;
     display:flex;
-    padding: 0 0 150px 0;
+    /* padding: 0 0 150px 0; */
 `

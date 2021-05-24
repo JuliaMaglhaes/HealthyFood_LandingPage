@@ -2,33 +2,43 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width:100%;
-    height:110%;
+    height:100vh;
     position:relative;
-    margin-left: 250px;
+    /* margin-left:250px; */
     display: flex;
     overflow: hidden;
     /* justify-content:center; */
 
-    #direita{
+    button{
         position: absolute;
-        right:10px;
-        top:45%;
-        background-color: var(--color-white);
-        border-radius: 50%;
+        right:0;
         border:none;
-        width:60px;
-        height:60px;
-    }
+        outline:none;
+        background: var(--color-white);
 
-    #esquerda{
-        position:absolute;
-        left:10px;
-        top:45%;
-        background-color: var(--color-white);
-        border-radius:50%;
-        border:none;
-        width:60px;
-        height:60px;
+        &:disabled{
+            background-color: rgba(255, 255, 255, 0.425);
+            visibility: hidden;
+        }
+
+        &:focus{
+            background-color: white;
+        }
+
+        &:hover{
+            background-color: var(--color-verde-hover)
+        }
+
+        &:nth-child(1){
+            left:0;
+            z-index: 999;
+        }
+        
+        .ec-arrow-right{
+            right:0;
+        }
+        
+        
     }
 `
 
