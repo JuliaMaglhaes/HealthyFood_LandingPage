@@ -10,8 +10,21 @@ export const Nav = styled.nav`
     top:0;
     z-index:999;
     position: absolute;
-`;
 
+    &#colorAtive{
+        transition: 0.5s;
+    }
+
+    @media screen and (max-width: 790px){
+        position:fixed;
+        
+        &#colorAtive{
+            top:0%;
+            background-color: var(--color-titles);
+            transition: 0.5s;
+        }
+    }
+`;
 export const NavbarContainer = styled.div`
     display:flex;
     width:78%;
@@ -19,6 +32,14 @@ export const NavbarContainer = styled.div`
     height:80px;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 790px){
+        justify-content:center
+    }
+
+    @media (min-width:791px) and (max-width: 862px){
+        width:80%;
+    }
 `;
 
 export const NavLogo = styled.a`
@@ -26,6 +47,15 @@ export const NavLogo = styled.a`
     font-size:35px;
     text-decoration: none;
     font-weight: 700;
+    width:100%;
+    white-space: nowrap;
+
+    @media screen and (max-width: 790px){
+        color: var(--color-white);   
+    }
+    @media (min-width:791px) and (max-width: 845px){
+        font-size:30px;
+    }
 `;
 
 export const NavbarMenu = styled.ul`
@@ -34,6 +64,10 @@ export const NavbarMenu = styled.ul`
     align-items:center;
     justify-content:space-between;
     width:450px;
+
+    @media (min-width:791px) and (max-width: 905px){
+        width:390px;
+    }
 
     .menu-botton{
         background-color: var(--color-white);
@@ -53,13 +87,30 @@ export const NavbarMenu = styled.ul`
         font-weight: 500;
         width:100%;
 
-        &.active{
-            border-bottom:3px solid var(--color-titles);
+        @media (min-width:791px) and (max-width: 845px){
+            font-size:15px;
         }
     }
 
     @media screen and (max-width: 790px){
-        display:none;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height:300px;
+        position: absolute;
+        justify-content: space-around;
+        top:-550%;
+        left:0%;
+        transition: 0.3s;
+
+        &#active{
+            background:var(--color-titles);
+            transition: 0.3s ;
+            left:0;
+            top:0;
+
+            margin-top:80px;
+        }
     }
 `;
 
@@ -79,6 +130,9 @@ export const Mobile = styled.div`
 
         .navbar-icon{
             display:flex;
+            z-index: 1999;
+            position:absolute;
+            right:40px;
         }
 
     }

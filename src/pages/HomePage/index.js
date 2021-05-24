@@ -7,6 +7,7 @@ import Scaffold from '../../components/Shared/Scaffold';
 import MemberContact from '../../components/MemberContact';
 
 
+
 const HomePage = () => {
   return(
        <Scaffold>

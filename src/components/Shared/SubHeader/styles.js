@@ -61,10 +61,19 @@ export const Information = styled.div`
             font-size:39px;
         }
     }
-    @media (min-width: 597px )and (max-width:1000px){
-        width: 60%;
+    @media (min-width:860px) and (max-width: 906px){
+        padding:100px;
+        width:60%;
+    }
+
+    @media (min-width:576px) and (max-width: 859px){
+        padding:30px;
+    }
+
+    @media (min-width: 907px ) and (max-width:1000px){
+        width: 65%;
         justify-content: center;
-        padding:40px;
+        padding:100px;
 
         h1{
             font-size:40px;
@@ -74,7 +83,6 @@ export const Information = styled.div`
     @media (min-width:1001px) and (max-width:1200px){
         width:60%;
         padding:120px;
-
     }
 `
 export const InputArea = styled.div`
@@ -105,6 +113,10 @@ export const InputArea = styled.div`
             background-color: var(--color-verde-hover);
             transition: 0.3s;
         }
+    }
+
+    @media screen and (max-width: 768px){
+        width:100%
     }
 
 `

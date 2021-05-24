@@ -1,6 +1,7 @@
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import React from 'react';
-import schema from './schema'
+import schema from './schema';
+import { mask, unMask } from 'remask';
 import { api } from '../../../services/api';
 import Logo from '../../../assets/img/logo.png';
 import handleSubmit from '../../../utils/cookieLocal';
@@ -14,10 +15,15 @@ import {
 import Modal from './Modal';
 
 const FormPage = () => {
-
     const[openModal, setModal] = useState(false);
     const displayModal = () =>{
         setModal(prevent => !prevent);
+    }
+
+    const [value, setCpfValue] = useState('')
+    const onChangeMask = event => {
+        setCpfValue(mask(event.target.value, ['999.999.999-99']));
+        var cpf = value.replace(/[^0-9]/g, "");
     }
 
     const changeCep = (event, setFieldValue) =>{
@@ -61,15 +67,15 @@ const FormPage = () => {
                     render={({isValid, setFieldValue}) => (
                         <Form onSubmit={handleSubmit}>
                             <img src={Logo} alt="logo" />
-                            <h1>Preencha seus dados</h1>
+                            <h1>Preencha com os seus dados</h1>
                             <ContainerForm>
                                 <label>Nome</label>
-                                <Field name="name" type="text" />
+                                <Field name="name" type="text" placeholder="Nome" />
                                 <ErrorMessage name="name"/>
                             </ContainerForm>
                             <ContainerForm>
                                 <label>CPF</label>
-                                <Field name="cpf" type="string" placeholder="Informe apenas os números do CPF" />
+                                <Field name="cpf" type="string" placeholder="Apenas os números do CPF" value={value} onChange={onChangeMask} />
                                 <ErrorMessage name="cpf"/>
                             </ContainerForm>
                             <ContainerForm>
@@ -79,13 +85,13 @@ const FormPage = () => {
                             </ContainerForm>
                             <ContainerForm>
                                 <label>CEP</label>
-                                <Field name="cep" type="text" placeholder="Informe apenas os números do CEP" onBlur={(event) => changeCep(event, setFieldValue)} />
+                                <Field name="cep" type="text" placeholder="Apenas os números do CEP" onBlur={(event) => changeCep(event, setFieldValue)} />
                                 <ErrorMessage name="cep"/>
                             </ContainerForm>
                             <div className="information">
                                 <ContainerForm id="city">
                                     <label>Cidade</label>
-                                    <Field name="cidade" type="text" />
+                                    <Field name="cidade" type="text" placeholder="Cidade"/>
                                     <ErrorMessage name="cidade"/>
                                 </ContainerForm>
                                 <ContainerForm id="estado">
@@ -125,21 +131,21 @@ const FormPage = () => {
                             </div>
                             <ContainerForm>
                                 <label>Logradouro</label>
-                                <Field name="logradouro" type="text" />
+                                <Field name="logradouro" type="text" placeholder="Logradouro" />
                             </ContainerForm>
                             <ContainerForm>
                                 <label>Bairro</label>
-                                <Field name="bairro" type="text" />
+                                <Field name="bairro" type="text" placeholder="Bairro" />
                                 <ErrorMessage name="bairro"/>
                             </ContainerForm>
                             <ContainerForm>
                                 <label>Complemento</label>
-                                <Field name="complemento" type="text" />
+                                <Field name="complemento" type="text" placeholder="Complemento" />
                                 <ErrorMessage name="complemento"/>
                             </ContainerForm>
                             <ContainerForm>
                                 <label>Número</label>
-                                <Field name="numero" type="text" />
+                                <Field name="numero" type="text" placeholder="Número" />
                                 <ErrorMessage name="numero"/>
                             </ContainerForm>
                             <div className="sub">
