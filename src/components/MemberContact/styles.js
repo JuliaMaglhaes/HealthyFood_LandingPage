@@ -6,7 +6,7 @@ export const Container = styled.div`
     display:flex;
     position: relative;
     width:100%;
-    height:100vh;
+    height:100%;
     flex-direction: column;
     background-color: var(--color-white);
     background: no-repeat right  100% url(${Background}) ;
@@ -51,14 +51,41 @@ export const Container = styled.div`
             cursor: pointer;
             transition: 0.3s;
             color: var(--color-white);
+            box-shadow: var(--shadow);
 
             :hover{
                 background-color: var(--color-verde-hover)
             }
         }
     }
+    @media (min-width:701px) and (max-width:900px){
+        background-color: var(--color-white);
+        padding:85px;
+        .areaText{
+            width:50%;
+        }
+        .inputArea{
+            width:60%; 
+        }
+    }
+
+    @media (min-width:1001px){
+        background-color: var(--color-white);
+    }
+
+    @media screen and (max-width: 1000px){
+        background-color: var(--color-white);
+        padding:40px;
+        .areaText{
+            width:40%;
+        }
+        .inputArea{
+            width:50%; 
+        }
+    }
     @media screen and (max-width:700px){
         background-position: 5% 0;
+        background-color: var(--color-white);
         padding:15px;
 
         .areaText{

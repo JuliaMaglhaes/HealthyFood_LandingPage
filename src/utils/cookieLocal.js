@@ -16,25 +16,61 @@ const handleSubmit = event => {
     const dadosForm = JSON.stringify(data);
     localStorage.setItem("dados", dadosForm);
 
+    const cookieData = [
+        {
+            text: 'Nome=',
+            value: `${data.name}`
+        },
+        {
+            text: 'Data=',
+            value: `${data.date}`
+        },
+        {
+            text: 'CPF=',
+            value: `${data.cpf}`
+        },
+        {
+            text: 'CEP=',
+            value: `${data.cep}`
+        },
+        {
+            text: 'Bairro=',
+            value: `${data.bairro}`
+        },
+        {
+            text: 'Cidade=',
+            value: `${data.cidade}`
+        },
+        {
+            text: 'UF=',
+            value: `${data.uf}`
+        },
+        {
+            text: 'Número=',
+            value: `${data.numero}`
+        },
+        {
+            text: 'Logradouro=',
+            value: `${data.logradouro}`
+        },
+        {
+            text: 'Complemento=',
+            value: `${data.complemento}`
+        },
+       
+        
+    ]
+
     const cookieSave = () =>{
         const date = new Date()
         date.setTime(date.getTime() + 60000 * 100);
 
         const expires = ";" + "expires=" + date.toUTCString();
-        document.cookie = "Nome="+`${data.name}`+ expires+ "; path=/";
-        document.cookie = "Data de nascimento="+`${data.date}`+ expires+ "; path=/";
-        document.cookie = "CPF="+`${data.cpf}`+expires+ "; secure; path=/";
-        document.cookie = "CEP="+`${data.cep}`+ expires+ "; path=/";
-        document.cookie = "Bairro="+`${data.bairro}`+ expires+ "; path=/";
-        document.cookie = "Cidade="+`${data.cidade}`+ expires+ "; path=/";
-        document.cookie = "UF="+`${data.uf}`+ expires+ "; path=/";
-        document.cookie = "Número="+`${data.numero}`+expires+ "; path=/";
-        if(data.logradouro.value < 1 || data.complemento.value < 1){
-            return;
-        } else{
-            document.cookie = "Logradouro="+`${data.logradouro}`+expires+ "; path=/";
-            document.cookie = "Complemento="+`${data.complemento}`+expires+ "; path=/";
-        }
+
+        {cookieData.map(item=>(
+            document.cookie = `${item.text}`+`${item.value}`+ expires+ "; path=/"
+        ))}
+
     }
     cookieSave();
 }

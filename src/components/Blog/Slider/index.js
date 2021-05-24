@@ -3,7 +3,10 @@ import ImageFoodTwo from '../../../assets/img/bloco_image_2.svg';
 import ImageFoodThree from '../../../assets/img/bloco_image_3.svg';
 import ImageFoodFour from '../../../assets/img/bloco_image_4.svg'
 import avatar from '../../../assets/img/avatar.png';
+import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md'
+
 import React from 'react';
+
 
 import { Container, Card, CardImage, CardArea } from './styles';
 
@@ -37,7 +40,7 @@ const SliderCards = () =>{
     return(
         <Container>
                 {fakeData.map(item=>(
-                        <Card>
+                        <Card className="card">
                             <CardImage style={{backgroundImage: `url(${item.image})`}}></CardImage>
                             <CardArea>
                             <h1> {item.text}</h1>
@@ -47,7 +50,19 @@ const SliderCards = () =>{
                             </div>
                             </CardArea>
                         </Card>
-                    ))}     
+                    ))}
+                    {/* <button id="direita">
+                        <MdKeyboardArrowRight 
+                            size={40}
+                            color="#badc58"
+                        />
+                    </button> 
+                    <button id="esquerda">
+                        <MdKeyboardArrowLeft id="esquerda"
+                            size={40}
+                            color="#badc58"
+                        />
+                    </button>     */}
         </Container>
     )
 }

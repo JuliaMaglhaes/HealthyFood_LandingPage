@@ -1,13 +1,35 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width:110%;
+    width:100%;
     height:110%;
     position:relative;
     margin-left: 250px;
     display: flex;
     overflow: hidden;
     /* justify-content:center; */
+
+    #direita{
+        position: absolute;
+        right:10px;
+        top:45%;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        border:none;
+        width:60px;
+        height:60px;
+    }
+
+    #esquerda{
+        position:absolute;
+        left:10px;
+        top:45%;
+        background-color: var(--color-white);
+        border-radius:50%;
+        border:none;
+        width:60px;
+        height:60px;
+    }
 `
 
 export const Card = styled.div`
