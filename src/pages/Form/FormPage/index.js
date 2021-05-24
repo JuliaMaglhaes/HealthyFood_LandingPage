@@ -3,58 +3,26 @@ import React from 'react';
 import schema from './schema'
 import { api } from '../../../services/api';
 import Logo from '../../../assets/img/logo.png';
+import handleSubmit from '../../../utils/cookieLocal';
+import { useState } from 'react';
 
 import {
     ContainerForm,
     Container,
     ContainerArea
 } from './styles';
-
-const handleSubmit = event => {
-    event.preventDefault();
-    const data = {
-        name: event.target.elements.name.value,
-        date: event.target.elements.date.value,
-        cpf: event.target.elements.cpf.value,
-        cep: event.target.elements.cep.value,
-        bairro: event.target.elements.bairro.value,
-        cidade: event.target.elements.cidade.value,
-        uf: event.target.elements.uf.value,
-        numero: event.target.elements.numero.value,
-        logradouro: event.target.elements.logradouro.value,
-        complemento: event.target.elements.complemento.value,
-    }
-    //Salvamento dos dados
-    const dadosForm = JSON.stringify(data);
-    localStorage.setItem("dados", dadosForm);
-
-    const cookieSave = () =>{
-        const date = new Date()
-        date.setTime(date.getTime() + 60000 * 100);
-
-        const expires = ";" + "expires=" + date.toUTCString();
-        document.cookie = "Nome="+`${data.name}`+ expires+ "; path=/";
-        document.cookie = "Data de nascimento="+`${data.date}`+ expires+ "; path=/";
-        document.cookie = "CPF="+`${data.cpf}`+expires+ "; secure; path=/";
-        document.cookie = "CEP="+`${data.cep}`+ expires+ "; path=/";
-        document.cookie = "Bairro="+`${data.bairro}`+ expires+ "; path=/";
-        document.cookie = "Cidade="+`${data.cidade}`+ expires+ "; path=/";
-        document.cookie = "UF="+`${data.uf}`+ expires+ "; path=/";
-        document.cookie = "Número="+`${data.numero}`+expires+ "; path=/";
-        if(data.logradouro.value < 1 || data.complemento.value < 1){
-            return;
-        } else{
-            document.cookie = "Logradouro="+`${data.logradouro}`+expires+ "; path=/";
-            document.cookie = "Complemento="+`${data.complemento}`+expires+ "; path=/";
-        }
-    }
-    cookieSave();
-}
+import Modal from './Modal';
 
 const FormPage = () => {
+
+    const[openModal, setModal] = useState(false);
+    const displayModal = () =>{
+        setModal(prevent => !prevent);
+    }
+
     const changeCep = (event, setFieldValue) =>{
         const {value} = event.target;
-        const cep = value?.replace(/\.|\-/g, '');
+        const cep = value?.replace(/[^0-9]/g, '');
         if(cep.length !== 8){
             return;
         }
@@ -101,7 +69,7 @@ const FormPage = () => {
                             </ContainerForm>
                             <ContainerForm>
                                 <label>CPF</label>
-                                <Field name="cpf" type="string" />
+                                <Field name="cpf" type="string" placeholder="Informe apenas os números do CPF" />
                                 <ErrorMessage name="cpf"/>
                             </ContainerForm>
                             <ContainerForm>
@@ -111,7 +79,7 @@ const FormPage = () => {
                             </ContainerForm>
                             <ContainerForm>
                                 <label>CEP</label>
-                                <Field name="cep" type="text" onBlur={(event) => changeCep(event, setFieldValue)} />
+                                <Field name="cep" type="text" placeholder="Informe apenas os números do CEP" onBlur={(event) => changeCep(event, setFieldValue)} />
                                 <ErrorMessage name="cep"/>
                             </ContainerForm>
                             <div className="information">
@@ -175,7 +143,8 @@ const FormPage = () => {
                                 <ErrorMessage name="numero"/>
                             </ContainerForm>
                             <div className="sub">
-                                <button type="submit" disabled={!isValid}>Submit</button>
+                                <button type="submit" onClick={displayModal} disabled={!isValid}>Submit</button>
+                                <Modal openModal={openModal} setModal={setModal}/>
                             </div>
                         </Form>
                     )}

@@ -15,6 +15,7 @@ export default createGlobalStyle`
         --color-p: #a2a1a6;
         --verde-escuro: #53a547;
         --color-p-hover: #726b6b;
+        --color-black-transparent: rgba(0, 0, 0, 0.541);
         
         --shadow: 6px 9px 28px -6px rgba(0,0,0,0.26);
         --padding-default: 0 150px;

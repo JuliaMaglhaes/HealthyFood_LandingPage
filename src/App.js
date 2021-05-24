@@ -1,20 +1,10 @@
 import GlobalStyle from './styles/global';
-
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './router/routes'
-
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css'
-
-NProgress.configure({
-  showSpinner: false,
-  trickleRate:0.1,
-  trickleSpeed: 300,
-});
+import Routes from './router/routes';
 
 function App() {
-  return (
 
+  return (
     <Router>
       <Routes />
       <GlobalStyle/>

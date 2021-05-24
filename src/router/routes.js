@@ -1,11 +1,12 @@
 import React from "react";
 import{
     Routes,
-    Route
+    Route,
 } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
 import Form from "../pages/Form";
+
 
 const MainRoutes = () => {
     return(

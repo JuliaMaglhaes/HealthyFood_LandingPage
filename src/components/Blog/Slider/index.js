@@ -34,7 +34,7 @@ const Slider = () =>{
                     <CardArea>
                         <h1> {item.text}</h1>
                         <div className="area-person">
-                            <img src={avatar} />
+                            <img src={avatar} alt="Avatar" />
                             <p>{item.username}</p>
                         </div>
                     </CardArea>
