@@ -53,5 +53,41 @@ export const NavbarMenu = styled.ul`
         font-weight: 500;
         width:100%;
 
+        &.active{
+            border-bottom:3px solid var(--color-titles);
+        }
+    }
+
+    @media screen and (max-width: 790px){
+        display:none;
     }
 `;
+
+export const Mobile = styled.div`
+    display:none;
+    height:40%;
+    align-items: center;
+
+    .navbar-icon{
+        cursor:pointer;
+        display:none;
+    }
+    
+    @media screen and (max-width:790px){
+        display:flex;
+        height:40%;
+
+        .navbar-icon{
+            display:flex;
+        }
+
+    }
+`
+export const NavbarBtn = styled.nav`
+    display:flex;
+    align-items:center;
+
+    @media screen and (max-width: 790px){
+        display:none;
+    }
+`
