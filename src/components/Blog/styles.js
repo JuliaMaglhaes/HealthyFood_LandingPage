@@ -9,6 +9,7 @@ export const Container = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 `;
 
 export const TextArea = styled.div`
@@ -37,9 +38,10 @@ export const TextArea = styled.div`
 
 export const SliderArea = styled.div`
     position: relative;
-    width:100%;
-    height:70vh;
+    width:120%;
+    height:auto;
     justify-content:center;
     overflow: hidden;
     display:flex;
+    padding: 0 0 150px 0;
 `

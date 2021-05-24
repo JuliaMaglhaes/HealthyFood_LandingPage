@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from '../Blog/Slider';
+import SliderCards from '../Blog/Slider';
 
 import { Container, TextArea, SliderArea } from './styles';
 
@@ -11,7 +11,7 @@ const Blog = () => {
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
           </TextArea>
           <SliderArea>
-            <Slider />
+            <SliderCards />
           </SliderArea>
       </Container>
   );

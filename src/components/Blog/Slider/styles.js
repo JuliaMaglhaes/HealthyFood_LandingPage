@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width:100%;
+    width:110%;
     height:110%;
     position:relative;
-    padding: var(--padding-default);
+    margin-left: 250px;
     display: flex;
     overflow: hidden;
-    justify-content:center;
+    /* justify-content:center; */
 `
 
 export const Card = styled.div`
@@ -32,8 +32,8 @@ export const CardImage = styled.div`
     background-size: cover;
     border-radius: 5px 5px 0 0;
     background-repeat: no-repeat;
-  
 `;
+
 export const CardArea = styled.div`
     position: relative;
     display:flex;
@@ -53,6 +53,7 @@ export const CardArea = styled.div`
     }
 
     .area-person{
+        width:69%;
         display:flex;
         flex:1;
         align-items: center;
@@ -61,9 +62,8 @@ export const CardArea = styled.div`
             width:55px;
             height:50px;
             border-radius: 50%;
+            color:var(--color-p);
             margin-right: 10px;
-            color:var(--color-p)
         }
     }
-  
-`;
+`

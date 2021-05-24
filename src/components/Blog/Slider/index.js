@@ -1,8 +1,9 @@
 import ImageBlog from '../../../assets/img/blog_image_1.svg';
 import ImageFoodTwo from '../../../assets/img/bloco_image_2.svg';
 import ImageFoodThree from '../../../assets/img/bloco_image_3.svg';
-import avatar from '../../../assets/img/avatar.png'
-import React from "react";
+import ImageFoodFour from '../../../assets/img/bloco_image_4.svg'
+import avatar from '../../../assets/img/avatar.png';
+import React from 'react';
 
 import { Container, Card, CardImage, CardArea } from './styles';
 
@@ -22,27 +23,34 @@ const fakeData = [
         text: 'The top 10 benefits of eating healthy',
         username: 'Bryan McGregor',
     },
+
+    {
+        image: `${ImageFoodFour}`,
+        text: 'Delicious Healthy Foods here',
+        username: 'Júlia Mac',
+    },
+    
 ]
 
-const Slider = () =>{
+const SliderCards = () =>{
    
     return(
         <Container>
-            {fakeData.map(item=>(
-                    <Card>
-                    <CardImage style={{backgroundImage: `url(${item.image})`}}/>
-                    <CardArea>
-                        <h1> {item.text}</h1>
-                        <div className="area-person">
-                            <img src={avatar} alt="Avatar" />
-                            <p>{item.username}</p>
-                        </div>
-                    </CardArea>
-                    </Card>
-                ))}
+                {fakeData.map(item=>(
+                        <Card>
+                            <CardImage style={{backgroundImage: `url(${item.image})`}}></CardImage>
+                            <CardArea>
+                            <h1> {item.text}</h1>
+                            <div className="area-person">
+                                <img src={avatar} alt="Avatar" />
+                                <p>{item.username}</p>
+                            </div>
+                            </CardArea>
+                        </Card>
+                    ))}     
         </Container>
     )
 }
 
-export default Slider;
+export default SliderCards;
 
