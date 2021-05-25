@@ -1,7 +1,7 @@
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import React from 'react';
 import schema from './schema';
-import { mask, unMask } from 'remask';
+import { mask } from 'remask';
 import { api } from '../../../services/api';
 import Logo from '../../../assets/img/logo.png';
 import handleSubmit from '../../../utils/cookieLocal';

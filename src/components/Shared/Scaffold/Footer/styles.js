@@ -34,6 +34,7 @@ export const Container = styled.div`
 
     @media screen and (max-width:616px){
         justify-content:center;
+        text-align:center;
         padding:20px;
     }
   

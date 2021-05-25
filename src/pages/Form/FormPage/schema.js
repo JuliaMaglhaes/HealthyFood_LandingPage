@@ -6,13 +6,11 @@ Yup.setLocale({
     }
 })
 
-
-
 export default Yup.object().shape({
     name: Yup.string().min(2, 'O campo é obrigatório e deve ter mais de 2 letras').required().typeError('Nome inválido').test(
-        'nome-verificador','O campo nome possuí números', (value) => {
+        'nome-verificador','O campo nome possui números', (value) => {
             const regex = /[0-9]/;
-            if(regex.test(value) != false){
+            if(regex.test(value) !== false){
                 return false;
             };
             return true;

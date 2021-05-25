@@ -24,7 +24,7 @@ function Navbar() {
             if(window.scrollY > 30){
                 setColor(true);
             }
-            if(window.scrollY == 0){
+            if(window.scrollY === 0){
                 setColor(false);
             }
         }

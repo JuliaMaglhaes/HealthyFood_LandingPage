@@ -56,9 +56,7 @@ const handleSubmit = event => {
         {
             text: 'Complemento=',
             value: `${data.complemento}`
-        },
-       
-        
+        },     
     ]
 
     const cookieSave = () =>{

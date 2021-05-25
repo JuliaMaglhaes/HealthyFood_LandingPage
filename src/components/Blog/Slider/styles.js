@@ -14,6 +14,11 @@ export const Container = styled.div`
         margin-left:0;
     }
 
+    @media (min-width:1500px) and (max-width:2569px){
+        min-height:550px;
+        height:auto;
+    }
+
     button{
         margin-top:49px;
         position: absolute;

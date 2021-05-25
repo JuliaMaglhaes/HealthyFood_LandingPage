@@ -11,6 +11,9 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     min-height:690px;
 
+    @media (min-width:1500px) and (max-width:2600px){
+        background-size: contain;
+    }
     @media screen and (max-width:991px){
         background-position: -200px;
         background-size: cover;
@@ -96,6 +99,24 @@ export const Description = styled.div`
             background-color: var(--color-verde-hover);
         }
     }
+    @media(min-width:1600px) and (max-width:1855px){
+        h1{
+            font-size:40px;
+        }
+        p{
+            font-size:20px;
+        }
+    }
+
+    @media (min-width:1856px) and (max-width:2660px){
+        h1{
+            font-size:60px;
+        }
+        p{
+            font-size:25px;
+        }
+    }
+
     @media screen and (max-width:700px){
         width:100%;
         h1{

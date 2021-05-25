@@ -3,10 +3,16 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width:100%;
     height:100%;
+    min-height:490px;
     display:flex;
     flex-wrap: wrap;
     margin-top:20px;
     justify-content:center;
+
+    @media (min-width:1600px) and (max-width:2560px){
+        min-height: 200px;
+        height:auto;
+    }
 `;
 
 export const Box = styled.div`

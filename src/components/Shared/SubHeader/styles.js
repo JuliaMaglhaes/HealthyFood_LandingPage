@@ -12,21 +12,26 @@ export const Container = styled.div`
     min-height:650px;
     background-position: right;
     background-position-y: 0px;
-
+    @media (min-width:1221px) and (max-width: 1896px) {
+        min-height: 100vh;
+        background-size: contain;
+    }
+    @media (min-width: 1900px) and (max-width: 3060px){
+        background-size: contain;
+    }
     @media (min-width: 905px )and (max-width:1200px){
         background-position: 400px;
-        background-position-y: 0;
-        height:100vh;
+        background-position-y:0;
+        background-size:contain;
     }
     @media (min-width: 598px )and (max-width:840px){
         background-position: 200px;
         background-position-y: 0;
     }
     @media screen and (max-width:859px){
-        background-size: 100%;
+        background-size: contain;
         justify-content:left;
         padding:40px;
-        height:auto;
     }
     @media (min-width:841px )and (max-width:903px){
         background-position: 300px;
@@ -51,6 +56,22 @@ export const Information = styled.div`
         font-size:50px;
     }
 
+    @media (min-width: 1890px) and (max-width: 2514px){
+        width:45%;
+        margin-left:140px;
+
+        h1{
+            font-size:90px;
+        }
+    }
+    @media (min-width: 2515px) and (max-width: 3060px){
+        width:40%;
+        margin-left:400px;
+
+        h1{
+            font-size:90px;
+        }
+    }
     @media screen and (max-width:596px){
         margin-top:390px;
         align-items: center;
@@ -68,6 +89,10 @@ export const Information = styled.div`
 
     @media (min-width:576px) and (max-width: 859px){
         padding:30px;
+
+        h1{
+            font-size:39px;
+        }
     }
 
     @media (min-width: 907px ) and (max-width:1000px){

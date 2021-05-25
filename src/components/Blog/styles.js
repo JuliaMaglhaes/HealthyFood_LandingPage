@@ -10,6 +10,11 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+
+    @media (min-width:1500px) and (max-width:2569px){
+        min-height:500px;
+        height:auto;
+    }
 `;
 
 export const TextArea = styled.div`

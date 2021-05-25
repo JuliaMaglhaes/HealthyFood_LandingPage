@@ -8,6 +8,11 @@ export const Container = styled.div`
   justify-content:center;
   position: relative;
 
+  @media (min-width:1600px) and (max-width:2560px){
+    min-height: 290px;
+    height:auto;
+  }
+
 `;
 
 export const ContainerText = styled.div`
@@ -41,6 +46,28 @@ export const InfoText = styled.div`
 
   @media screen and (max-width:900px){
         width:90%;
+  }
+
+  @media (min-width: 1691px) and (max-width: 2514px){
+    width:45%;
+
+    h1{
+      font-size:50px;
+    }
+    p{
+      font-size:20px;
+    }
+  }
+
+    @media (min-width: 2515px) and (max-width: 3060px){
+        width:40%;
+
+        h1{
+            font-size:70px;
+        }
+        p{
+          font-size:30px;
+        }
     }
 `
 

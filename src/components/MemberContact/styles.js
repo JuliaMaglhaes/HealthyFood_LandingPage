@@ -13,6 +13,7 @@ export const Container = styled.div`
     background-position-y: 0px;
     justify-content:center;
     padding: var(--padding-default);
+    background-size: contain;
 
     .areaText{
         width:40%;
@@ -94,6 +95,32 @@ export const Container = styled.div`
 
         .inputArea{
             width:80%; 
+        }
+    }
+
+    @media screen and (max-width:521px){
+        justify-content:center;
+
+        .areaText{
+            margin-top:250px;
+            width:100%;
+        }
+        .inputArea{
+            width:90%;
+        }
+    }
+
+    @media (min-width:1800px) and (max-width:2600px){
+        .areaText{
+            width:34%;
+
+            h1{
+                font-size:75px;
+            }
+        }
+
+        .inputArea{
+            width:30%;
         }
     }
 `
