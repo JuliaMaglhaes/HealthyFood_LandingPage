@@ -84,7 +84,7 @@ export const NavbarMenu = styled.ul`
         height:100%;
         text-transform: uppercase;
         cursor:pointer;
-        font-weight: 500;
+        font-weight: 600;
         width:100%;
         transition: 0.1s;
 
