@@ -3,25 +3,36 @@ import ImageFoodTwo from '../../../assets/img/bloco_image_2.svg';
 import ImageFoodThree from '../../../assets/img/bloco_image_3.svg';
 import ImageFoodFour from '../../../assets/img/bloco_image_4.svg'
 import avatar from '../../../assets/img/avatar.png';
-import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md'
 
 import React from 'react';
 import Carousel from 'react-elastic-carousel'
 
-import { Container, Card, CardImage, CardArea } from './styles';
+import { Container, Card, CardImage, CardArea} from './styles';
 
 const breakPoints =[
     {
         width: 500,
-        itemsToShow: 1
+        itemsToShow: 1,
+        pagination: false
     },
     {
         width: 768,
-        itemsToShow:2
+        itemsToShow:2,
+        pagination: false
+    },
+    {
+        width: 870,
+        itemsToShow:3,
+        pagination: false
+    },
+    {
+        width: 1008,
+        itemsToShow:3.3,
+        pagination:false
     },
     {
         width:1200,
-        itemsToShow:3.4,
+        itemsToShow:3,
         pagination: false
     },
     {
@@ -49,9 +60,8 @@ const fakeData = [
     {
         image: `${ImageFoodFour}`,
         text: 'Delicious Healthy Foods here',
-        username: 'Júlia Mac',
+        username: 'Júlia Magalhães',
     },
-    
 ]
 
 const SliderCards = () =>{

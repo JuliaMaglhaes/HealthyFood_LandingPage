@@ -86,6 +86,15 @@ export const NavbarMenu = styled.ul`
         cursor:pointer;
         font-weight: 500;
         width:100%;
+        transition: 0.1s;
+
+        &:hover{
+            background-color: var(--color-white);
+            color: var(--color-font-title-logo);
+            height:50px;
+            border-radius: 5px;
+            transition:0.1s;
+        }
 
         @media (min-width:791px) and (max-width: 845px){
             font-size:15px;

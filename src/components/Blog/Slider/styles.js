@@ -4,17 +4,36 @@ export const Container = styled.div`
     width:100%;
     height:100vh;
     position:relative;
-    /* margin-left:250px; */
     display: flex;
     overflow: hidden;
-    /* justify-content:center; */
+    margin-top:14px;
+    margin-left:140px;
+    cursor: grab;
+
+    @media (max-width: 1000px){
+        margin-left:0;
+    }
 
     button{
+        margin-top:49px;
         position: absolute;
-        right:0;
+        right:20px;
         border:none;
         outline:none;
         background: var(--color-white);
+        color: var(--color-font-title-logo);
+
+        &:focus:enabled {
+            color: var(--color-font-title-logo);
+            background-color: white;
+            box-shadow: 0 0 2px 0 #333;
+        }
+
+        &:hover:enabled {
+            color: var(--color-font-title-logo);
+            background-color: white;
+            box-shadow: 0 0 2px 0 #333;
+        }
 
         &:disabled{
             background-color: rgba(255, 255, 255, 0.425);
@@ -26,19 +45,18 @@ export const Container = styled.div`
         }
 
         &:hover{
-            background-color: var(--color-verde-hover)
+            background-color: var(--color-verde-hover);
+            color: white;
         }
 
         &:nth-child(1){
-            left:0;
+            left:20px;
             z-index: 999;
         }
         
         .ec-arrow-right{
             right:0;
-        }
-        
-        
+        }  
     }
 `
 
@@ -62,7 +80,7 @@ export const CardImage = styled.div`
     min-height:250px;
     background-position: center;
     background-size: cover;
-    border-radius: 5px 5px 0 0;
+    border-radius: 7px 7px 0 0;
     background-repeat: no-repeat;
 `;
 
@@ -72,20 +90,22 @@ export const CardArea = styled.div`
     flex-direction: column;
     padding: 25px;
     justify-content:center;
+    align-items: center;
     /* text-align:center; */
     
     h1{
         color: var(--color-titles);
-        font-size:25px;
+        font-size:23px;
         padding-bottom:20px;
         font-weight:700;
         max-height:100px;
         overflow: hidden;
         height:100px;
+        font-family: Montserrat;
     }
 
     .area-person{
-        width:69%;
+        width:89%;
         display:flex;
         flex:1;
         align-items: center;
@@ -96,6 +116,7 @@ export const CardArea = styled.div`
             border-radius: 50%;
             color:var(--color-p);
             margin-right: 10px;
+            margin-left:-15px;
         }
     }
 `
